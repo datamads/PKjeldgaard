@@ -21,7 +21,7 @@ Proly : Pattern {
 
     var logpat = Ppatlace([
             Pseq([1, p {: x.log(2)/x, x <- (2..(steps/2).asInt)}], inf),
-            Pseq([1, p {: Rest(x.log(2)/x), x <- (2..(steps/2).asInt)}], inf)
+            Pseq([Rest(1), p {: Rest(x.log(2)/x), x <- (2..(steps/2).asInt)}], inf)
             ],repeats);
 
     case
