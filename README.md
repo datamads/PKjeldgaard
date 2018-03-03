@@ -15,6 +15,8 @@ percussive instrument with a decaying duration.
 
 Works really nicely in the \dur key of a Pbind
 
+I used an early version of this at the end of this performance: https://www.youtube.com/watch?v=tLS4iNAYiuQ
+
 ### Pkrlive
 `Pkrlive(bus: ~bus, min: 0.1, max: 1.0)`
 
