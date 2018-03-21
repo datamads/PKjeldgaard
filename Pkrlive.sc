@@ -7,7 +7,7 @@ Add the file to your extensions folder and use it like this in a pattern: Pkrliv
 */
 
 Pkrlive : Pfunc {
-	*new {|bus, min=0.1, max=1.0|
+	*new {|bus, min=0.1, max=1.0, frommin=(-1.0), frommax=1.0|
 		var check;
 		var last = 0.0;
 		
@@ -22,7 +22,7 @@ Pkrlive : Pfunc {
 		check = {bus.server.hasShmInterface}.try;
 		
 		check.if ({
-			^Pfunc({bus.getSynchronous().wrap(min, max)});
+			^Pfunc({bus.getSynchronous().linlin(frommin,frommax,min,max)});
 		}, {
 			"No shared memory interface detected. Use localhost server on SC 3.5 or higher to get better performance".warn;	
 			bus.get({|v| last = v;});
