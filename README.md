@@ -48,7 +48,7 @@ Pbind(\dur, Pkrlive(~s) * Pseq((1..10)/10, inf)).play;
 This one was inspired by Steve Reich's use of phasing patterns 
 
 It's pretty simple: It takes an event pattern (a Pbind for example) and makes
-a copy playing out of phase by the amount given in rate
+a stretched copy playing out of phase by the amount given in rate
 
 Example:
 
